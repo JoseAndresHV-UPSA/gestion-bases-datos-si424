@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="JOSO.VeterinariaOLTP.dwclass"
+  DTS:DTSID="{F6BEF4C4-5FBA-458A-AB22-989D69693299}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=JOSO;User ID=dwclass;Initial Catalog=VeterinariaOLTP;Persist Security Info=True;Application Name=SSIS-VeterinariaETL-{F6BEF4C4-5FBA-458A-AB22-989D69693299}JOSO.VeterinariaOLTP.dwclass;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvyq+hR0zu0avpHl6jzbV/wAAAAACAAAAAAAQZgAAAAEAACAAAAAXtMRnJhUkGcDq8frkiHkig+jQVbxmaYT68z5nkQZwKAAAAAAOgAAAAAIAACAAAADcNh22EU/oOnjwJ3yQi0lan0GnW1codnwyaTxqH5w6NYAAAAA8iAMaf3glC/qkdMBcK7GeeNzXWSYQPTqYuQBVpi938hBuqZ4H7C2OZQpDXILuSr2TOwoKw9qzQiGDNK/7Rnjn//nFlGHcHJ0idRryt6sRzekQQ5MBaCzumPsxPm//lEnie+IuiC/dPbynLxz5B9sHgTUvHfK+0xKuIG4n/xYox0AAAADOzA6TGXs5DQNo7O58EX71cp5KmAvT4W8G4jtRaMoXNlxs6rWLCevRQkqQGh/LxVPc2WDGJc3q+cZzZNWOZwUl</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

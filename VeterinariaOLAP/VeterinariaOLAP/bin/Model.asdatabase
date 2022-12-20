@@ -1,0 +1,436 @@
+{
+  "name": "VeterinariaOLAP",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "SqlServer JOSO VeterinariaOLAP",
+        "connectionString": "Provider=SQLNCLI11;Data Source=JOSO;Persist Security Info=true;User ID=dwclass;Initial Catalog=VeterinariaOLAP",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "Clientes",
+        "columns": [
+          {
+            "name": "CodigoCli",
+            "dataType": "string",
+            "sourceColumn": "CodigoCli",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "ApellidoFam",
+            "dataType": "string",
+            "sourceColumn": "ApellidoFam",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Direccion",
+            "dataType": "string",
+            "sourceColumn": "Direccion",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Zona",
+            "dataType": "string",
+            "sourceColumn": "Zona",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Barrio",
+            "dataType": "string",
+            "sourceColumn": "Barrio",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Telefono",
+            "dataType": "string",
+            "sourceColumn": "Telefono",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Edad",
+            "dataType": "int64",
+            "sourceColumn": "Edad",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Genero",
+            "dataType": "int64",
+            "sourceColumn": "Genero",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Nombre",
+            "dataType": "string",
+            "sourceColumn": "Nombre",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Clientes",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Clientes].* FROM [dbo].[Clientes] ",
+              "dataSource": "SqlServer JOSO VeterinariaOLAP"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Clientes].* FROM [dbo].[Clientes] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Clientes"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Mascotas",
+        "columns": [
+          {
+            "name": "CodMascota",
+            "dataType": "string",
+            "sourceColumn": "CodMascota",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Alias",
+            "dataType": "string",
+            "sourceColumn": "Alias",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Especie",
+            "dataType": "string",
+            "sourceColumn": "Especie",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Raza",
+            "dataType": "string",
+            "sourceColumn": "Raza",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "color",
+            "dataType": "string",
+            "sourceColumn": "color",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Edad",
+            "dataType": "int64",
+            "sourceColumn": "Edad",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PesoActual",
+            "dataType": "int64",
+            "sourceColumn": "PesoActual",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Mascotas",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Mascotas].* FROM [dbo].[Mascotas] ",
+              "dataSource": "SqlServer JOSO VeterinariaOLAP"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Mascotas].* FROM [dbo].[Mascotas] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Mascotas"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Tiempos",
+        "columns": [
+          {
+            "name": "Fecha",
+            "dataType": "dateTime",
+            "sourceColumn": "Fecha",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Dia",
+            "dataType": "string",
+            "sourceColumn": "Dia",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "NombreDia",
+            "dataType": "string",
+            "sourceColumn": "NombreDia",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Mes",
+            "dataType": "string",
+            "sourceColumn": "Mes",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "NombreMes",
+            "dataType": "string",
+            "sourceColumn": "NombreMes",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Anio",
+            "dataType": "string",
+            "sourceColumn": "Anio",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Estacion",
+            "dataType": "string",
+            "sourceColumn": "Estacion",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Tiempos",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Tiempos].* FROM [dbo].[Tiempos] ",
+              "dataSource": "SqlServer JOSO VeterinariaOLAP"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Tiempos].* FROM [dbo].[Tiempos] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Tiempos"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Vacunas",
+        "columns": [
+          {
+            "name": "CodVacuna",
+            "dataType": "string",
+            "sourceColumn": "CodVacuna",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "NombreVac",
+            "dataType": "string",
+            "sourceColumn": "NombreVac",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "EnfermedadPrev",
+            "dataType": "string",
+            "sourceColumn": "EnfermedadPrev",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Vacunas",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Vacunas].* FROM [dbo].[Vacunas] ",
+              "dataSource": "SqlServer JOSO VeterinariaOLAP"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Vacunas].* FROM [dbo].[Vacunas] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Vacunas"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Visitas",
+        "columns": [
+          {
+            "name": "FechaConsulta",
+            "dataType": "dateTime",
+            "sourceColumn": "FechaConsulta",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "CodMascota",
+            "dataType": "string",
+            "sourceColumn": "CodMascota",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "CodVacuna",
+            "dataType": "string",
+            "sourceColumn": "CodVacuna",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "CodigoCli",
+            "dataType": "string",
+            "sourceColumn": "CodigoCli",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Peso",
+            "dataType": "int64",
+            "sourceColumn": "Peso",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "MontoAtencion",
+            "dataType": "decimal",
+            "sourceColumn": "MontoAtencion",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Medicacion",
+            "dataType": "string",
+            "sourceColumn": "Medicacion",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Visitas",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Visitas].* FROM [dbo].[Visitas] ",
+              "dataSource": "SqlServer JOSO VeterinariaOLAP"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Sum of Peso",
+            "expression": "SUM([Peso])"
+          },
+          {
+            "name": "Count of Peso",
+            "expression": "COUNTA([Peso])"
+          },
+          {
+            "name": "Sum of MontoAtencion",
+            "expression": "SUM([MontoAtencion])",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Visitas].* FROM [dbo].[Visitas] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Visitas"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "8e41dfd4-f6f1-43f0-9e1b-81846db7f5ee",
+        "fromTable": "Visitas",
+        "fromColumn": "FechaConsulta",
+        "toTable": "Tiempos",
+        "toColumn": "Fecha"
+      },
+      {
+        "name": "c970629e-58da-44c0-86f5-6816de3a20f6",
+        "fromTable": "Visitas",
+        "fromColumn": "CodigoCli",
+        "toTable": "Clientes",
+        "toColumn": "CodigoCli"
+      },
+      {
+        "name": "1c0090d9-1fda-41f2-ae57-daba3df24519",
+        "fromTable": "Visitas",
+        "fromColumn": "CodMascota",
+        "toTable": "Mascotas",
+        "toColumn": "CodMascota"
+      },
+      {
+        "name": "ea7fe790-5e25-4e1f-90dd-928b020c066a",
+        "fromTable": "Visitas",
+        "fromColumn": "CodVacuna",
+        "toTable": "Vacunas",
+        "toColumn": "CodVacuna"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  }
+}
